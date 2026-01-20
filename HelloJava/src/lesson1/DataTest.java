@@ -30,6 +30,25 @@ public class DataTest {
 
 		var h = false; // 참 거짓만을 다루는 타입(4바이트)
 		System.out.println(h);
+
+		var name = "임형구";
+		System.out.println("이름:" + name);
+
+		// 형 변환(Casting)
+		long kk = 1000;  // 자동 형변환, 업캐스팅
+		double dd = 1.1f;
+
+		int kk2 = (int)kk; // 수동 형변환, 다운캐스팅
+		System.out.println(kk2);
+
+		// int -> char
+		int kang = '강';
+		System.out.println(kang);
+		kang = kang + 1;
+		System.out.println((char)kang);
+
+
+
 	}
 
 }
