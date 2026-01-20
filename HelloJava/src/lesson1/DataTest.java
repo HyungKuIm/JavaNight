@@ -11,23 +11,24 @@ public class DataTest {
 		short b = -10000;
 		System.out.println("b = " + b);
 
-		int c = 1;  // 속도가 매우 빠름!
+		var c = 1;  // 속도가 매우 빠름!
 		System.out.println("c = " + c);
 
-		long d = 1000L;  // 크기는 가장 크지만, int보다 큰 정수를 담고 싶을때
+		var d = 1000L;  // 크기는 가장 크지만, int보다 큰 정수를 담고 싶을때
 		System.out.println("d = " + d);
 
 		//float, double
-		float e = 1.1f;  // 32비트 실수
+		// var는 대입하는 값이 명확할 경우 사용 적극 추천!
+		var e = 1.1f;  // 32비트 실수
 		System.out.println("e = " + e);
 
-		double f = 1.1111; // 64비트 실수 (왠만하면 double 씀)
+		var f = 1.1111; // 64비트 실수 (왠만하면 double 씀)
 		System.out.println("f = " + f);
 
-		char g = '강';  // 2바이트 문자
+		var g = '강';  // 2바이트 문자
 		System.out.println(g);
 
-		boolean h = false; // 참 거짓만을 다루는 타입(4바이트)
+		var h = false; // 참 거짓만을 다루는 타입(4바이트)
 		System.out.println(h);
 	}
 
