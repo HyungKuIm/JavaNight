@@ -10,6 +10,7 @@ public class PersonTest {
 
 		System.out.println("이름:" + person.getName());
 		System.out.println("나이:" + person.getAge());
+		person.showInfo();
 
 		// 캡슐화(Encapsulation)
 		//   : 클래스, 생성자, 접근제어,  메소드, 레코드

@@ -15,6 +15,11 @@ public class Person {
 		this.age = age;
 	}
 
+	public void showInfo() {
+		System.out.println("이름:" + name);
+		System.out.println("나이:" + age);
+	}
+
 	public String getName() {
 		return name;
 	}
