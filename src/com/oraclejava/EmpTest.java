@@ -1,31 +1,65 @@
 package com.oraclejava;
 
-class Emp {
-    String ename;
+abstract class Emp {
+    private String empno;
+    private String ename;
+
     public void gotoWork() {
-        System.out.println(ename + " 출근");
+        System.out.println(ename + " 출근합니다.");
     }
 
+    abstract void work();
+
+    public void getOffWork() {
+        System.out.println(ename + " 퇴근합니다.");
+    }
+
+    public String getEmpno() {
+        return empno;
+    }
+
+    public void setEmpno(String empno) {
+        this.empno = empno;
+    }
+
+    public String getEname() {
+        return ename;
+    }
+
+    public void setEname(String ename) {
+        this.ename = ename;
+    }
 }
 
 class Programmer extends Emp {
-    public Programmer(String ename) {
-        this.ename = ename;
-    }
 
-    public void work() {
-        System.out.println(ename + "이 개발합니다.");
+    @Override
+    void work() {
+        System.out.println(getEname() + "이(가) 개발을 합니다");
+    }
+}
+
+class Designer extends Emp {
+    @Override
+    void work() {
+        System.out.println(getEname() + "이(가) 디자인을 합니다.");
     }
 }
 
 public class EmpTest {
     public static void main(String[] args) {
-//        Emp e = new Emp();
-//        System.out.println(e);
-        Programmer p = new Programmer("홍길동");
+        Programmer p = new Programmer();
+        p.setEmpno("1111");
+        p.setEname("홍길동");
         p.gotoWork();
         p.work();
-//        Emp e1 = new Emp("홍길순");
-//        System.out.println(e1);
+        p.getOffWork();
+        Designer d = new Designer();
+        d.setEmpno("2222");
+        d.setEname("홍길순");
+        d.gotoWork();
+        d.work();
+        d.getOffWork();
+
     }
 }
